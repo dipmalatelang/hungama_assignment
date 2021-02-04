@@ -96,7 +96,6 @@
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
             android:text="@{data.overview}"
-
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Tv_ReleaseDate"
             app:layout_constraintTop_toBottomOf="@+id/Tv_ReleaseDate"

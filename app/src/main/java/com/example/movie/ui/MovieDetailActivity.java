@@ -2,7 +2,6 @@ package com.example.movie.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -16,7 +15,6 @@ import com.google.gson.Gson;
 
 import static com.example.movie.utils.Constants.API_KEY;
 import static com.example.movie.utils.Constants.BASE_URL;
-
 
 public class MovieDetailActivity extends AppCompatActivity implements HttpClient.MovieDataListener{
     private ActivityMovieDetailBinding binding;
@@ -46,7 +44,6 @@ public class MovieDetailActivity extends AppCompatActivity implements HttpClient
         binding.setSimilarList(response.getResults());
         binding.setCallback((dataType, view, position) -> {
             MovieResult responseData = (MovieResult) dataType;
-            Log.i(TAG, "getResult: "+responseData.getTitle());
             openDetailMovieScreen(responseData);
         });
     }

@@ -34,15 +34,7 @@ public class MovieList_Activity extends AppCompatActivity implements HttpClient.
     private static final String TAG = "MovieList_Activity";
     ArrayList<MovieResult> list = new ArrayList<>();
 
-    private MovieListViewModel viewModel;
-
     String CALL_URL = BASE_URL + "movie/popular?api_key=" + API_KEY;
-    //    https://api.themoviedb.org/3/  movie/793070/similar?api_key=2d5d21f393818fa327e538d7d6f754cf&language=en-US&page=1
-
-
-    List<MovieResult> movieList = new ArrayList<>();
-
-//    List<MovieListPojo> movieListPojos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

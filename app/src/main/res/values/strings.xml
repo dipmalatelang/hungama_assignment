@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Movie</string>
+    <string name="label_genre">Genre :-</string>
+    <string name="label_cast">Cast</string>
+    <string name="label_crew">Crew</string>
+    <string name="label_similar_movies">Similar Movies</string>
 </resources>

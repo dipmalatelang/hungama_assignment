@@ -18,6 +18,7 @@ import static com.example.movie.utils.Constants.IMAGE_URL;
 
 public class BindingAdapter {
 
+    @SuppressWarnings("ALL")
     @androidx.databinding.BindingAdapter(value = {"layoutFile", "listener", "listData"}, requireAll = false)
     public static <E> void bindAdapter(RecyclerView recyclerView, int id, BaseInterface listener, List<E> list) {
         if (recyclerView.getAdapter() == null) {
@@ -28,11 +29,11 @@ public class BindingAdapter {
         }
     }
 
+    @SuppressWarnings("unused")
     @androidx.databinding.BindingAdapter("bind:setViewVisibility")
     public static void showHide(MaterialButton btn, boolean enabled) {
         enableDisableView(btn, !enabled);
     }
-
 
     public static void enableDisableView(View view, boolean enabled) {
         view.setEnabled(enabled);

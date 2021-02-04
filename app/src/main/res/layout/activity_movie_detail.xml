@@ -52,7 +52,7 @@
                     android:layout_width="58dp"
                     android:layout_height="22dp"
                     android:layout_marginTop="8dp"
-                    android:text="Genre :- "
+                    android:text="@string/label_genre"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="@+id/Tv_Language"
                     app:layout_constraintTop_toBottomOf="@+id/Tv_Language"
@@ -78,7 +78,9 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/detail_movie_img"
                     app:layout_constraintTop_toTopOf="@+id/detail_movie_img"
-                    android:src="@drawable/ic_play_arrow_black_24dp" />
+                    android:src="@drawable/ic_play_arrow_black_24dp"
+                    tools:targetApi="lollipop"
+                    tools:ignore="UnusedAttribute" />
 
 
                 <ImageView
@@ -165,7 +167,7 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/abhaya_libre_medium"
-                    android:text="Cast"
+                    android:text="@string/label_cast"
                     android:textSize="14sp"
                     app:layout_constraintStart_toStartOf="parent"
                     android:visibility="gone"
@@ -193,7 +195,7 @@
                     android:layout_marginStart="8dp"
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
-                    android:text="Crew"
+                    android:text="@string/label_crew"
                     android:textSize="14sp"
                     android:fontFamily="@font/abhaya_libre_medium"
                     app:layout_constraintStart_toStartOf="parent"
@@ -221,7 +223,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/abhaya_libre_medium"
-                    android:text="Similar  Movies "
+                    android:text="@string/label_similar_movies"
                     android:textColor="@color/colorYellow"
                     android:textSize="16sp"
                     app:layout_constraintStart_toStartOf="@+id/tv_overview"

@@ -76,8 +76,6 @@ public class BaseAdapter<T> extends RecyclerView.Adapter<BaseAdapter.ViewHolder>
         notifyItemRemoved(position);
     }
 
-
-
     public class ViewHolder<V extends ViewDataBinding> extends RecyclerView.ViewHolder {
 
         private final V v;
