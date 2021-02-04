@@ -2,6 +2,7 @@ package com.example.movie.ui;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
@@ -41,6 +42,7 @@ public class MovieDetailActivity extends AppCompatActivity implements HttpClient
     @Override
     public void getResult(String jsonResponse) {
         MovieResponse response = new Gson().fromJson(jsonResponse, MovieResponse.class);
+        binding.TvSimilarMovie.setVisibility(response.getResults().size() > 0 ? View.VISIBLE : View.INVISIBLE);
         binding.setSimilarList(response.getResults());
         binding.setCallback((dataType, view, position) -> {
             MovieResult responseData = (MovieResult) dataType;

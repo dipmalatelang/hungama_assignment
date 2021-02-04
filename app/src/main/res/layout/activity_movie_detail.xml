@@ -125,13 +125,15 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
-                    android:maxLength="18"
-                    android:textSize="24sp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
                     android:text="@{data.title}"
-                    tools:text="Movie Title"
+                    android:textSize="24sp"
                     app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                    app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="@+id/imageView2"
-                    app:layout_constraintTop_toBottomOf="@+id/detail_movie_img" />
+                    app:layout_constraintTop_toBottomOf="@+id/detail_movie_img"
+                    tools:text="Movie Title" />
 
 
                 <TextView

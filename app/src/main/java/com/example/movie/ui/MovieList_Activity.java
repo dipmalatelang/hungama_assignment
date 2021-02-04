@@ -46,8 +46,6 @@ public class MovieList_Activity extends AppCompatActivity implements HttpClient.
 
         iniView();
         new HttpClient.GetMovieData(this).execute(CALL_URL);
-
-
     }
 
     private void iniView() {

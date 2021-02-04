@@ -57,14 +57,15 @@
 
         <TextView
             android:id="@+id/Tv_title"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
+            android:layout_margin="8dp"
             android:text="@{data.title}"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/cardView"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
             tools:text="Movie Title" />
 
         <TextView
@@ -72,7 +73,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:text="@{data.releaseDate}"
+            android:text="@{`Release date - ` + data.releaseDate}"
             app:layout_constraintStart_toStartOf="@+id/Tv_title"
             app:layout_constraintTop_toBottomOf="@+id/Tv_title"
             tools:text="Release Date" />
@@ -95,11 +96,11 @@
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginRight="8dp"
-            android:text="@{data.overview}"
+            android:text="@{`Ratings - `+ data.voteAverage + `/10` }"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/Tv_ReleaseDate"
             app:layout_constraintTop_toBottomOf="@+id/Tv_ReleaseDate"
-            tools:text="other details" />
+            tools:text="ratings - 8.8/10" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

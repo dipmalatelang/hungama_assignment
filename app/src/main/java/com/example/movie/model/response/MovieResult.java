@@ -18,7 +18,7 @@ public class MovieResult {
     private List<Integer> genreIds = null;
     @SerializedName("id")
     @Expose
-    private Integer id;
+    private long id;
     @SerializedName("original_language")
     @Expose
     private String originalLanguage;
@@ -45,10 +45,10 @@ public class MovieResult {
     private Boolean video;
     @SerializedName("vote_average")
     @Expose
-    private Float voteAverage;
+    private double voteAverage;
     @SerializedName("vote_count")
     @Expose
-    private Integer voteCount;
+    private int voteCount;
 
     /**
      * No args constructor for use in serialization
@@ -74,7 +74,7 @@ public class MovieResult {
      * @param adult
      * @param posterPath
      */
-    public MovieResult(Boolean adult, String backdropPath, List<Integer> genreIds, Integer id, String originalLanguage, String originalTitle, String overview, Float popularity, String posterPath, String releaseDate, String title, Boolean video, Float voteAverage, Integer voteCount) {
+    public MovieResult(Boolean adult, String backdropPath, List<Integer> genreIds, long id, String originalLanguage, String originalTitle, String overview, Float popularity, String posterPath, String releaseDate, String title, Boolean video, double voteAverage, int voteCount) {
         super();
         this.adult = adult;
         this.backdropPath = backdropPath;
@@ -116,11 +116,11 @@ public class MovieResult {
         this.genreIds = genreIds;
     }
 
-    public Integer getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -188,19 +188,19 @@ public class MovieResult {
         this.video = video;
     }
 
-    public Float getVoteAverage() {
-        return voteAverage;
+    public String getVoteAverage() {
+        return String.valueOf(voteAverage);
     }
 
-    public void setVoteAverage(Float voteAverage) {
+    public void setVoteAverage(double voteAverage) {
         this.voteAverage = voteAverage;
     }
 
-    public Integer getVoteCount() {
+    public int getVoteCount() {
         return voteCount;
     }
 
-    public void setVoteCount(Integer voteCount) {
+    public void setVoteCount(int voteCount) {
         this.voteCount = voteCount;
     }
 
