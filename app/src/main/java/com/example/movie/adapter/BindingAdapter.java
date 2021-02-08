@@ -49,8 +49,7 @@ public class BindingAdapter {
     @androidx.databinding.BindingAdapter(value = {"image", "placeholder"}, requireAll = false)
     public static void setImage(ImageView image, String url, Drawable placeHolder) {
         String posterUrl = IMAGE_URL + url;
-        if (!url.isEmpty()) {
-
+        if (url != null) {
             Glide.with(image.getContext()).load(posterUrl).centerCrop()
                     .placeholder(R.drawable.ic_film)
                     .into(image);

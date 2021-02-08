@@ -1,80 +1,26 @@
-package com.example.movie.model.response;
+package com.example.movie.model;
 
-import com.google.gson.annotations.Expose;
-import com.google.gson.annotations.SerializedName;
-
+import java.io.Serializable;
 import java.util.List;
 
-public class MovieResult {
+public class MovieResult implements Serializable {
 
-    @SerializedName("adult")
-    @Expose
     private Boolean adult;
-    @SerializedName("backdrop_path")
-    @Expose
     private String backdropPath;
-    @SerializedName("genre_ids")
-    @Expose
     private List<Integer> genreIds = null;
-    @SerializedName("id")
-    @Expose
     private long id;
-    @SerializedName("original_language")
-    @Expose
     private String originalLanguage;
-    @SerializedName("original_title")
-    @Expose
     private String originalTitle;
-    @SerializedName("overview")
-    @Expose
     private String overview;
-    @SerializedName("popularity")
-    @Expose
-    private Float popularity;
-    @SerializedName("poster_path")
-    @Expose
+    private double popularity;
     private String posterPath;
-    @SerializedName("release_date")
-    @Expose
     private String releaseDate;
-    @SerializedName("title")
-    @Expose
     private String title;
-    @SerializedName("video")
-    @Expose
     private Boolean video;
-    @SerializedName("vote_average")
-    @Expose
-    private double voteAverage;
-    @SerializedName("vote_count")
-    @Expose
-    private int voteCount;
+    private String voteAverage;
+    private long voteCount;
 
-    /**
-     * No args constructor for use in serialization
-     *
-     */
-    public MovieResult() {
-    }
-
-    /**
-     *
-     * @param overview
-     * @param voteAverage
-     * @param releaseDate
-     * @param video
-     * @param genreIds
-     * @param originalLanguage
-     * @param title
-     * @param originalTitle
-     * @param popularity
-     * @param backdropPath
-     * @param id
-     * @param voteCount
-     * @param adult
-     * @param posterPath
-     */
-    public MovieResult(Boolean adult, String backdropPath, List<Integer> genreIds, long id, String originalLanguage, String originalTitle, String overview, Float popularity, String posterPath, String releaseDate, String title, Boolean video, double voteAverage, int voteCount) {
+    public MovieResult(Boolean adult, String backdropPath, List<Integer> genreIds, long id, String originalLanguage, String originalTitle, String overview, double popularity, String posterPath, String releaseDate, String title, Boolean video, String voteAverage, long voteCount) {
         super();
         this.adult = adult;
         this.backdropPath = backdropPath;
@@ -148,7 +94,7 @@ public class MovieResult {
         this.overview = overview;
     }
 
-    public Float getPopularity() {
+    public double getPopularity() {
         return popularity;
     }
 
@@ -189,14 +135,14 @@ public class MovieResult {
     }
 
     public String getVoteAverage() {
-        return String.valueOf(voteAverage);
+        return voteAverage;
     }
 
-    public void setVoteAverage(double voteAverage) {
+    public void setVoteAverage(String voteAverage) {
         this.voteAverage = voteAverage;
     }
 
-    public int getVoteCount() {
+    public long getVoteCount() {
         return voteCount;
     }
 

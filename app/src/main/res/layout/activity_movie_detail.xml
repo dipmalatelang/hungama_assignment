@@ -6,7 +6,7 @@
     <data>
         <variable
             name="data"
-            type="com.example.movie.model.response.MovieResult" />
+            type="com.example.movie.model.MovieResult" />
         <variable
             name="similarList"
             type="java.util.List" />
